@@ -49,7 +49,12 @@ jobs:
     needs: generate-config
     strategy:
       matrix:
-        build_env: ${{ fromJson(needs.generate-config.outputs.job-config) }}
+        build_env:
+          - tag: "23.05.5"
+            pkgarch: "aarch64_cortex-a53"
+            target: "rockchip"
+            subtarget: "armv8"
+           
       fail-fast: false
 
     steps:
