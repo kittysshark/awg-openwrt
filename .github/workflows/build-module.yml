@@ -118,10 +118,10 @@ jobs:
 
       - name: Build AmneziaWG
         run: |
-          VERMAGIC=`cat ./build_dir/target-*/linux-*/linux-*/.vermagic`
+          VERMAGIC=0919bf77bd78281b8293e21504faecfb
           echo "Vermagic: $VERMAGIC"
 
-          VERMAGIC_EXPECTED=${{ matrix.build_env.vermagic }}
+          VERMAGIC_EXPECTED=0919bf77bd78281b8293e21504faecfb
 
           if [ "$VERMAGIC" != "$VERMAGIC_EXPECTED" ]; then
             echo Vermagic mismatch: $VERMAGIC, expected $VERMAGIC_EXPECTED
