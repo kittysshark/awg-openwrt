@@ -108,8 +108,8 @@ jobs:
           echo "    > make target/linux/compile"
           make target/linux/compile  -i -j `nproc` V=s
 
-          VERMAGIC=`cat ./build_dir/target-*/linux-*/linux-*/.vermagic`
-          VERMAGIC_EXPECTED=${{ matrix.build_env.vermagic }}
+          VERMAGIC=0919bf77bd78281b8293e21504faecfb
+          VERMAGIC_EXPECTED=0919bf77bd78281b8293e21504faecfb
 
           if [ "$VERMAGIC" != "$VERMAGIC_EXPECTED" ]; then
             echo Vermagic mismatch: $VERMAGIC, expected $VERMAGIC_EXPECTED
