@@ -39,7 +39,7 @@ jobs:
 
       - name: Generate Job Config
         id: generate-config
-        run: node index.js ${{ env.VERSION }}
+        run: node index.js https://mirror-03.infra.openwrt.org/releases/23.05.5/targets/
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
