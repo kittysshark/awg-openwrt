@@ -143,10 +143,10 @@ jobs:
           tag_name=${{  github.ref_name }}
           mkdir -p awgrelease
           postfix="v${{ matrix.build_env.tag }}_${{ matrix.build_env.pkgarch}}_${{ matrix.build_env.target}}_${{ matrix.build_env.subtarget}}"
-          ls -l /home/runner/work/awg-openwrt/awg-openwrt/bin/packages/aarch64_generic/awgopenwrt/
+          #ls -l /home/runner/work/awg-openwrt/awg-openwrt/bin/packages/aarch64_generic/awgopenwrt/
           cp /home/runner/work/awg-openwrt/awg-openwrt/bin/packages/aarch64_generic/awgopenwrt/amneziawg-tools_*.ipk awgrelease/amneziawg-tools_${postfix}.ipk
           cp /home/runner/work/awg-openwrt/awg-openwrt/bin/packages/aarch64_generic/awgopenwrt/luci-app-amneziawg_*.ipk awgrelease/luci-app-amneziawg_${postfix}.ipk
-          cp /home/runner/work/awg-openwrt/awg-openwrt/bin/packages/aarch64_generic/awgopenwrt/kmod-amneziawg_*.ipk awgrelease/kmod-amneziawg_${postfix}.ipk
+          #cp /home/runner/work/awg-openwrt/awg-openwrt/bin/packages/aarch64_generic/awgopenwrt/kmod-amneziawg_*.ipk awgrelease/kmod-amneziawg_${postfix}.ipk
 
       - name: Release
         uses: softprops/action-gh-release@v1
